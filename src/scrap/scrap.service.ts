@@ -23,16 +23,17 @@ export class ScrapService {
     //scrap
     async scrap(req) {
         try {
+            const { url } = req.query
+            console.log("url",url)
             let content = {
                 instructor: "",
                 about: "",
                 syllabus: [],
                 rating: 0
             }
-            const url1 = 'https://www.coursera.org/learn/server-side-nodejs#syllabus'
             const browser = await puppeteer.launch();
             const page = await browser.newPage();
-            await page.goto(url1);
+            await page.goto(url);
             const html = await page.content()
             const $ = cheerio.load(html);
             content.about = $('.content').text()
