@@ -9,7 +9,6 @@ export class UserController {
     @Get('/')
     async scrap(@Req() req: Request, @Res() res: Response) {
         try {
-            console.log(req)
             let results = await this.scrapService.scrap(req);
             console.log("recive vontect", results)
             res.status(200).send({

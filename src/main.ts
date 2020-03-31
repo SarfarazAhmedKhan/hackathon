@@ -7,7 +7,7 @@ async function bootstrap() {
   apps.use(express.static('public'));
   app.use('/static/img', express.static('uploads'));
   app.enableCors()
-  await app.listen(process.env.PORT || 3000);
+  await app.listen(process.env.PORT || 4000);
 }
 
 bootstrap();

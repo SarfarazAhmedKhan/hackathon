@@ -4,7 +4,6 @@ import { MongooseModule } from '@nestjs/mongoose'
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ScrapModule } from './scrap/scrap.module';
-import { AdminModule } from './admin/admin.module';
 import { LoggerMiddleware } from './middleware/logger.middleware';
 
 @Module({
@@ -13,7 +12,6 @@ import { LoggerMiddleware } from './middleware/logger.middleware';
       dest: './uploads'
     }),
     ScrapModule,
-    AdminModule,
     MongooseModule.forRoot('mongodb+srv://sarfarazahmedkhan:Afriart@cluster0-je03p.mongodb.net/test?retryWrites=true&w=majority',
       { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: false })
     , MongooseModule.forFeature([]),
