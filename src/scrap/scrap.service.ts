@@ -2,17 +2,10 @@ import { Injectable, Req } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose'
 import { Model } from 'mongoose'
 import { User } from './scrap.model'
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken')
 import { RevokedService } from '../revokedToken/revokedToken.service'
 import { NodemailerService } from '../nodemailer/nodemailer.service'
 import { NestCrawlerService } from 'nest-crawler';
-import axios from 'axios'
-import { async } from 'rxjs/internal/scheduler/async';
-import { response } from 'express';
 const cheerio = require('cheerio');
-// import fetch from '@web-master/node-web-fetch'
-const https = require('https')
 const puppeteer = require('puppeteer');
 @Injectable()
 export class ScrapService {
