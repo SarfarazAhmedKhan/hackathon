@@ -17,7 +17,6 @@ export class ScrapService {
     async scrap(req) {
         try {
             const { url } = req.query
-            console.log("url",url)
             let content = {
                 instructor: "",
                 about: "",
@@ -34,16 +33,7 @@ export class ScrapService {
             content.instructor = $('.instructor-name').text();
             const syllabus = $('.SyllabusModule')
             await syllabus.each(function () {
-                // let list = []
                 const text = $(this).find('.content').text();
-                // let inner = $(this).find('.ItemGroupView')
-                // inner.each(function () {
-                //     let items = $(this).find('.items').text();
-                //     console.log("view items here",items)
-                //     list.push({
-                //         items
-                //     })
-                // })
                 const title = $(this).find('.headline-2-text').text();
                 content.syllabus.push({
                     text,
