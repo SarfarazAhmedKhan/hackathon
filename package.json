@@ -27,7 +27,7 @@
     "@nestjs/platform-express": "^6.11.11",
     "@web-master/node-web-fetch": "^0.10.0",
     "aws-sdk": "^2.640.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
     "cheerio": "^1.0.0-rc.3",
     "cookie-parser": "^1.4.5",
