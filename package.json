@@ -26,7 +26,7 @@
     "@nestjs/mongoose": "^6.2.1",
     "@nestjs/platform-express": "^6.11.11",
     "@web-master/node-web-fetch": "^0.10.0",
-    "aws-sdk": "^2.640.0",
+    "aws-sdk": "^2.814.0",
     "axios": "^0.19.2",
     "bcryptjs": "^2.4.3",
     "cheerio": "^1.0.0-rc.3",
